@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Domenic Laraya — Graphic Design Portfolio</title>
+<meta name="description" content="Graphic design portfolio of Christian Domenic Laraya — branding, advertising, digital, print, web and church media design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+/* =============================================================
+   Christian Domenic Laraya — Graphic Design Portfolio
+   Theme carried over from the original PDF portfolio:
+   near-black ground, cream ink, "Bagel Fat One" blob display type,
+   red pill CTAs (matches the PDF's red "VIEW MORE" buttons).
+   ============================================================= */
+
+:root{
+  --bg:#111110;
+  --bg-soft:#1b1a17;
+  --cream:#F3ECDD;
+  --cream-dim:#c9c0aa;
+  --red:#CE4430;
+  --red-dark:#9C3120;
+  --blob:'Bagel Fat One', system-ui, sans-serif;
+  --body:'Poppins', -apple-system, sans-serif;
+  --gutter: clamp(20px, 6vw, 72px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
+body{
+  background:var(--bg); color:var(--cream); font-family:var(--body);
+  line-height:1.6; -webkit-font-smoothing:antialiased; position:relative; overflow-x:hidden;
+}
+body.lightbox-open{ overflow:hidden; }
+
+/* grain + vignette texture, fixed behind everything */
+body::before{
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(ellipse at 85% 90%, rgba(255,255,255,0.04), transparent 45%),
+    linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%);
+}
+body::after{
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font:inherit;}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px;}
+h1,h2,h3{font-weight:600;line-height:1;}
+
+.eyebrow{
+  font-family:var(--body); font-weight:500; font-size:12px; letter-spacing:0.3em;
+  text-transform:uppercase; color:var(--red); display:block; margin-bottom:6px;
+}
+.blob{ font-family:var(--blob); font-weight:400; letter-spacing:0.01em; color:var(--cream); }
+
+.section{ position:relative; z-index:1; padding:clamp(48px,6vw,90px) var(--gutter); border-bottom:1px solid rgba(243,236,221,0.08); }
+.inner{ max-width:1300px; margin:0 auto; }
+.center{ text-align:center; }
+.section-intro{ max-width:60ch; color:var(--cream-dim); font-size:15px; margin-top:10px; }
+
+/* ---- nav ---- */
+.topnav{
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px var(--gutter);
+  background:rgba(17,17,16,0.85); backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(243,236,221,0.1);
+}
+.topnav .mark{ font-family:var(--blob); font-size:20px; color:var(--cream); }
+.topnav .links{ display:flex; gap:24px; font-size:12px; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; }
+.topnav .links a{ opacity:0.75; transition:opacity .2s, color .2s; }
+.topnav .links a:hover{ opacity:1; color:var(--red); }
+.menu-btn{ display:none; background:none; border:1px solid var(--cream); color:var(--cream); font-family:var(--body); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:8px 14px; border-radius:999px; cursor:pointer; }
+.progress-rail{ position:fixed; top:0; left:0; height:2px; width:0%; background:var(--red); z-index:201; transition:width .1s linear; }
+
+/* ---- buttons ---- */
+.pill-btn{
+  display:inline-block; font-family:var(--blob); font-size:15px; letter-spacing:0.05em;
+  color:var(--cream); background:var(--red); padding:14px 40px; border-radius:999px;
+  border:none; cursor:pointer; transition:background .2s, transform .2s; box-shadow:0 8px 24px rgba(206,68,48,0.25);
+}
+.pill-btn:hover{ background:var(--red-dark); transform:translateY(-2px); }
+.pill-btn.ghost{ background:transparent; border:1.5px solid var(--cream); box-shadow:none; }
+.pill-btn.ghost:hover{ background:var(--cream); color:var(--bg); }
+
+/* ---- COVER ---- */
+.cover{ min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border-bottom:none; }
+.cover .blob-name{ font-size:clamp(56px,13vw,180px); line-height:0.95; margin:4px 0 8px; }
+.cover .sub{ font-size:clamp(12px,1.4vw,15px); letter-spacing:0.35em; text-transform:uppercase; color:var(--cream-dim); }
+.cover .cover-cta{ margin-top:38px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.cover .scroll-cue{ position:absolute; bottom:34px; font-size:10px; letter-spacing:0.25em; text-transform:uppercase; color:var(--cream-dim); opacity:0.7; }
+
+/* ---- ABOUT ---- */
+.about .inner{ display:grid; grid-template-columns:0.85fr 1.3fr; gap:clamp(32px,6vw,90px); align-items:start; }
+.about .ph{ width:100%; height:auto; aspect-ratio:3/4; }
+.about h2{ font-family:var(--body); font-weight:600; font-size:clamp(26px,3.2vw,40px); margin-bottom:22px; max-width:16ch; color:var(--cream); }
+.about h2 em{ font-style:italic; color:var(--red); }
+.about p.bio{ font-size:16px; max-width:56ch; margin-bottom:36px; color:var(--cream-dim); }
+.timeline{ border-top:1px solid rgba(243,236,221,0.15); }
+.timeline li{ display:flex; gap:24px; padding:14px 0; border-bottom:1px solid rgba(243,236,221,0.15); font-size:14px; }
+.timeline .yr{ font-family:var(--body); font-weight:600; color:var(--red); width:90px; flex-shrink:0; }
+
+/* ---- generic placeholder card ---- */
+.ph{
+  height:clamp(220px,32vw,360px); width:clamp(180px,28vw,300px);
+  border:1px dashed rgba(243,236,221,0.35); border-radius:6px;
+  display:flex; align-items:center; justify-content:center; text-align:center; padding:16px;
+  background:rgba(243,236,221,0.03);
+}
+.ph span{ font-size:11px; letter-spacing:0.03em; color:var(--cream-dim); max-width:24ch; }
+
+/* ---- section title (used for case studies + category headers) ---- */
+.case-title{ text-align:center; }
+.case-title .blob{ font-size:clamp(40px,7vw,90px); }
+.case-title .tagline{ font-size:clamp(14px,1.6vw,18px); color:var(--cream-dim); margin-top:8px; }
+
+/* =============================================================
+   FEATURED WORKS
+   ============================================================= */
+.featured-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(14px,2vw,22px);
+  margin-top:clamp(28px,4vw,44px);
+}
+.featured-grid .card:first-child{ grid-column:1 / -1; }
+.featured-grid .card:first-child .card-frame{ aspect-ratio:21/9; }
+
+/* =============================================================
+   FILTERABLE GALLERY
+   ============================================================= */
+.filter-bar{
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:clamp(24px,3vw,34px); margin-bottom:clamp(28px,4vw,40px);
+}
+.filter-btn{
+  font-family:var(--body); font-weight:500; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--cream-dim); background:transparent; border:1px solid rgba(243,236,221,0.25);
+  padding:9px 20px; border-radius:999px; cursor:pointer; transition:all .2s;
+}
+.filter-btn:hover{ border-color:var(--cream); color:var(--cream); }
+.filter-btn.active{ background:var(--red); border-color:var(--red); color:var(--cream); }
+
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(12px,1.6vw,18px);
+}
+.card{ cursor:pointer; }
+.card-frame{
+  position:relative; aspect-ratio:4/5; border-radius:6px; overflow:hidden;
+  background:rgba(243,236,221,0.04); border:1px solid rgba(243,236,221,0.12);
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
+}
+.card-frame img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.card:hover .card-frame img{ transform:scale(1.045); }
+.card-frame .fallback{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center;
+  padding:18px; background:rgba(243,236,221,0.03);
+}
+.card-frame .fallback span{ font-family:var(--blob); font-size:clamp(15px,2vw,20px); color:var(--cream-dim); max-width:20ch; }
+.card-frame img.hide{ display:none; }
+.card-meta{ margin-top:10px; display:flex; justify-content:space-between; gap:10px; font-size:12px; }
+.card-meta .t{ color:var(--cream); font-weight:500; }
+.card-meta .c{ color:var(--red); text-transform:uppercase; letter-spacing:0.08em; font-size:10px; white-space:nowrap; }
+
+.empty-note{ color:var(--cream-dim); font-size:14px; padding:30px 0; text-align:center; display:none; }
+.empty-note.show{ display:block; }
+
+/* ---- expand / view more (kept for hand-authored sections) ---- */
+details.expand{ margin-top:clamp(20px,3vw,32px); text-align:center; }
+details.expand summary{ list-style:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; }
+details.expand summary::-webkit-details-marker{ display:none; }
+details.expand summary .pill-btn{ display:inline-block; }
+details.expand[open] summary .pill-btn::after{ content:' ↑'; }
+details.expand summary .pill-btn::after{ content:' ↓'; }
+details.expand .row{ margin-top:clamp(14px,2vw,22px); }
+.row{ display:flex; gap:clamp(5px,1vw,10px); flex-wrap:wrap; justify-content:center; margin-top:clamp(18px,2.5vw,28px); }
+.row img{ height:clamp(220px,32vw,360px); width:auto; object-fit:cover; border-radius:6px; box-shadow:0 12px 30px rgba(0,0,0,0.4); }
+.logo-card{
+  height:clamp(220px,32vw,360px); width:clamp(220px,32vw,360px);
+  background:var(--cream); border-radius:6px; display:flex; align-items:center; justify-content:center;
+  padding:24px; box-shadow:0 12px 30px rgba(0,0,0,0.4);
+}
+.logo-card img{ height:100%; width:100%; object-fit:contain; border-radius:0; box-shadow:none; }
+
+/* =============================================================
+   LIGHTBOX
+   ============================================================= */
+.lightbox{
+  position:fixed; inset:0; z-index:500; display:none; align-items:center; justify-content:center;
+  background:rgba(10,10,9,0.94); padding:clamp(16px,4vw,48px);
+}
+.lightbox.open{ display:flex; }
+.lightbox-inner{ position:relative; max-width:1100px; width:100%; max-height:90vh; display:flex; flex-direction:column; align-items:center; }
+.lightbox-stage{ position:relative; width:100%; display:flex; align-items:center; justify-content:center; }
+.lightbox img{ max-height:74vh; max-width:100%; object-fit:contain; border-radius:6px; box-shadow:0 30px 70px rgba(0,0,0,0.6); }
+.lightbox-caption{ text-align:center; margin-top:18px; }
+.lightbox-caption .t{ font-family:var(--blob); font-size:clamp(18px,2.4vw,26px); }
+.lightbox-caption .c{ color:var(--red); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin-top:4px; }
+.lightbox-close, .lightbox-nav{
+  position:absolute; background:rgba(243,236,221,0.08); border:1px solid rgba(243,236,221,0.25); color:var(--cream);
+  border-radius:999px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:background .2s;
+}
+.lightbox-close:hover, .lightbox-nav:hover{ background:rgba(243,236,221,0.18); }
+.lightbox-close{ top:-6px; right:-6px; width:40px; height:40px; font-size:18px; z-index:2; }
+.lightbox-nav{ top:50%; transform:translateY(-50%); width:46px; height:46px; font-size:20px; }
+.lightbox-nav.prev{ left:-8px; }
+.lightbox-nav.next{ right:-8px; }
+
+/* ---- footer / skills ---- */
+.skills .cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,5vw,60px); margin-top:44px; }
+.skills h4{ font-family:var(--body); font-weight:600; font-size:14px; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:18px; color:var(--red); }
+.skills li{ padding:11px 0; border-top:1px solid rgba(243,236,221,0.12); font-size:15px; color:var(--cream-dim); }
+.skills li:last-child{ border-bottom:1px solid rgba(243,236,221,0.12); }
+
+.contact{ background:var(--cream); color:var(--bg); text-align:center; border-bottom:none; }
+.contact .blob{ font-size:clamp(40px,7vw,90px); color:var(--bg); margin-bottom:28px; }
+.contact .details{ display:flex; flex-direction:column; gap:10px; font-size:15px; font-weight:500; margin-bottom:32px; }
+.contact .details a{ border-bottom:1px solid rgba(17,17,16,0.25); transition:border-color .2s; }
+.contact .details a:hover{ border-color:var(--red); }
+.contact .cta-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px; }
+.contact .pill-btn.ghost{ border-color:rgba(17,17,16,0.35); color:var(--bg); }
+.contact .pill-btn.ghost:hover{ background:var(--bg); color:var(--cream); }
+.contact .foot-note{ margin-top:48px; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.55; }
+
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width:900px){
+  .about .inner{ grid-template-columns:1fr; }
+  .skills .cols{ grid-template-columns:1fr; }
+  .featured-grid{ grid-template-columns:repeat(2,1fr); }
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .topnav .links{ display:none; }
+  .menu-btn{ display:inline-block; }
+  .topnav.open .links{
+    display:flex; flex-direction:column; gap:18px; position:absolute; top:100%; left:0; right:0;
+    background:var(--bg); padding:22px var(--gutter) 30px; border-bottom:1px solid rgba(243,236,221,0.1);
+  }
+  .row{ flex-direction:column; align-items:center; }
+  .row img, .ph, .logo-card{ width:min(100%,380px); height:auto; aspect-ratio:4/3; }
+  .logo-card{ aspect-ratio:1/1; }
+  .featured-grid{ grid-template-columns:1fr; }
+  .featured-grid .card:first-child .card-frame{ aspect-ratio:4/5; }
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); gap:10px; }
+  .lightbox-nav{ width:38px; height:38px; }
+  .lightbox-nav.prev{ left:-2px; }
+  .lightbox-nav.next{ right:-2px; }
+  .lightbox-close{ top:0; right:0; }
+}
+@media (max-width:420px){
+  .gallery-grid{ grid-template-columns:1fr 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="progress-rail" id="progressRail"></div>
+
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="mark">CDL</a>
+  <ul class="links">
+    <li><a href="#featured">Work</a></li>
+    <li><a href="#branding">Branding</a></li>
+    <li><a href="#digital">Digital</a></li>
+    <li><a href="#print">Print</a></li>
+    <li><a href="#web">Web</a></li>
+    <li><a href="#church">Church</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="topnav">Menu</button>
+</nav>
+
+<main>
+
+  <!-- 01 — COVER / HERO -->
+  <section class="section cover" id="cover">
+    <span class="eyebrow">Graphic Design</span>
+    <h1 class="blob blob-name">Portfolio</h1>
+    <p class="sub">Christian Domenic Laraya</p>
+    <div class="cover-cta">
+      <a href="#featured" class="pill-btn">View Selected Works</a>
+    </div>
+    <span class="scroll-cue">Scroll</span>
+  </section>
+
+  <!-- 02 — SELECTED / FEATURED WORKS -->
+  <section class="section reveal" id="featured">
+    <div class="inner">
+      <span class="eyebrow">Selected Works</span>
+      <h2 class="blob" style="font-size:clamp(32px,5vw,60px);">Featured Projects</h2>
+      <p class="section-intro">A curated set of the strongest pieces across branding, advertising, digital, print, and web work. Set <code>"featured": true</code> in <code>data/gallery.json</code> to control what appears here.</p>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- FULL FILTERABLE PORTFOLIO -->
+  <section class="section reveal" id="work">
+    <div class="inner">
+      <span class="eyebrow">Full Portfolio</span>
+      <h2 class="blob" style="font-size:clamp(32px,5vw,60px);">Browse the Work</h2>
+      <p class="section-intro">Filter by category, or click any piece to open it full-screen.</p>
+      <div class="filter-bar" id="filterBar"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="empty-note" id="emptyNote">Nothing in this category yet.</p>
+    </div>
+  </section>
+
+  <!-- 03 — BRANDING & IDENTITY -->
+  <section class="section case-title reveal" id="branding">
+    <div class="inner">
+      <span class="eyebrow">Case Study — Branding &amp; Identity</span>
+      <h2 class="blob">Aura</h2>
+      <p class="tagline">Skincare brand identity, packaging &amp; campaign design</p>
+      <div class="row">
+        <img src="images/branding/aura-model.jpg" alt="Aura skincare campaign shot with model" loading="lazy">
+        <img src="images/branding/aura-packaging.jpg" alt="Aura serum packaging and dieline mockup" loading="lazy">
+        <div class="logo-card"><img src="images/branding/aura-logo.jpg" alt="Aura logo mark" loading="lazy"></div>
+      </div>
+      <details class="expand">
+        <summary><span class="pill-btn">View More</span></summary>
+        <div class="row">
+          <img src="images/branding/aura-radiant-forever.jpg" alt="Aura Radiant Forever advertising campaign" loading="lazy">
+          <img src="images/branding/aura-beach.jpg" alt="Aura beach lifestyle advertisement" loading="lazy">
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section case-title reveal" id="teatone">
+    <div class="inner">
+      <span class="eyebrow">Case Study — Branding &amp; Marketing</span>
+      <h2 class="blob">TeaTone</h2>
+      <p class="tagline">Milk tea brand identity, loyalty program &amp; social campaigns</p>
+      <div class="row">
+        <div class="ph"><span>Loyalty card — front &amp; back</span></div>
+        <div class="ph"><span>₱100 OFF delivery promo poster</span></div>
+        <div class="ph"><span>Drink lineup product shot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — DIGITAL & SOCIAL MEDIA -->
+  <section class="section case-title reveal" id="digital">
+    <div class="inner">
+      <span class="eyebrow">Digital &amp; Social Media</span>
+      <h2 class="blob">EDMs &amp; Social<br>Graphics</h2>
+      <p class="tagline">Email campaigns, product EDMs, and social media graphics</p>
+      <div class="row">
+        <img src="images/digital-social/livingstone-oximeters-edm.jpg" alt="Livingstone Finger Ring Oximeters EDM" loading="lazy">
+        <img src="images/digital-social/social-hidilyn.jpg" alt="Hidilyn Diaz Olympic tribute graphic" loading="lazy">
+        <img src="images/digital-social/social-boxing.jpg" alt="Philippine boxing Olympic tribute graphic" loading="lazy">
+      </div>
+      <details class="expand">
+        <summary><span class="pill-btn">View More</span></summary>
+        <div class="row">
+          <img src="images/digital-social/livingstone-childcare-edm.jpg" alt="Livingstone Childcare Needs EDM" loading="lazy">
+          <img src="images/digital-social/livingstone-school-edm.jpg" alt="Livingstone School Supplies EDM" loading="lazy">
+          <img src="images/digital-social/social-video-creation.jpg" alt="Video creation and marketing service ad" loading="lazy">
+          <img src="images/digital-social/social-web-dev.jpg" alt="Web development and creation ad" loading="lazy">
+          <img src="images/digital-social/social-apolinario.jpg" alt="Apolinario Mabini commemorative graphic" loading="lazy">
+          <img src="images/digital-social/social-cancer-feeding.jpg" alt="Feeding for Cancer Patients community poster" loading="lazy">
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 06 — PRINT & EDITORIAL -->
+  <section class="section case-title reveal" id="print">
+    <div class="inner">
+      <span class="eyebrow">Print &amp; Editorial</span>
+      <h2 class="blob">Flyers, Brochures<br>&amp; Catalogues</h2>
+      <p class="tagline">Livingstone International product flyers, brochures &amp; catalogues</p>
+      <div class="row">
+        <img src="images/print/livingstone-pen-torches-flyer.jpg" alt="Diagnostic Pen Torches flyer" loading="lazy">
+        <img src="images/print/livingstone-toothbrushes-flyer.jpg" alt="Flexible Toothbrushes flyer" loading="lazy">
+        <img src="images/print/livingstone-healthcare-brochure.jpg" alt="Healthcare Supplies brochure" loading="lazy">
+      </div>
+      <details class="expand">
+        <summary><span class="pill-btn">View More</span></summary>
+        <div class="row">
+          <img src="images/print/livingstone-science-brochure.jpg" alt="School Science Supplies brochure" loading="lazy">
+          <img src="images/print/livingstone-childcare-brochure.jpg" alt="Childcare Supplies brochure" loading="lazy">
+          <img src="images/print/livingstone-veterinary-catalogue.jpg" alt="Veterinary Product Guide catalogue" loading="lazy">
+          <img src="images/print/livingstone-childcare-catalogue.jpg" alt="Child Care Product Guide catalogue" loading="lazy">
+          <img src="images/print/livingstone-firstaid-catalogue.jpg" alt="School First Aid Product Guide catalogue" loading="lazy">
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 08 — WEB DESIGN / WEBSITE MOCKUPS -->
+  <section class="section case-title reveal" id="web">
+    <div class="inner">
+      <span class="eyebrow">Digital Design — Website Mockups</span>
+      <h2 class="blob">Web Design</h2>
+      <div class="row">
+        <div class="ph"><span>Dentistria — dental service website</span></div>
+        <div class="ph"><span>Thrive Agronomics — agriculture website</span></div>
+        <div class="ph"><span>ELXpress — recruitment website</span></div>
+      </div>
+      <details class="expand">
+        <summary><span class="pill-btn">View More</span></summary>
+        <div class="row">
+          <div class="ph"><span>Brean Sands — holiday property website</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 09 — CHURCH & COMMUNITY GRAPHICS -->
+  <section class="section case-title reveal" id="church">
+    <div class="inner">
+      <span class="eyebrow">Versatility — Church &amp; Community</span>
+      <h2 class="blob">Church Media<br>Graphics</h2>
+      <div class="row">
+        <img src="images/church/kids-church.jpg" alt="Kid's Church event graphic" loading="lazy">
+        <img src="images/church/prayer-works.jpg" alt="Prayer Works campaign graphic" loading="lazy">
+        <img src="images/church/happiness-quote.jpg" alt="Church quote graphic on happiness" loading="lazy">
+      </div>
+      <details class="expand">
+        <summary><span class="pill-btn">View More</span></summary>
+        <div class="row">
+          <img src="images/church/wonderful-blessings.jpg" alt="Wonderful and Impossible Blessings graphic" loading="lazy">
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 10 — ABOUT / EXPERIENCE / SKILLS -->
+  <section class="section about reveal" id="about">
+    <div class="inner">
+      <div class="ph"><span>Portrait — plain background, consistent lighting</span></div>
+      <div>
+        <span class="eyebrow">About</span>
+        <h2>8+ years turning <em>brands</em> into visual stories.</h2>
+        <p class="bio">I'm a graphic and web designer based in Batangas, Philippines, with over eight years of experience building brand identities, packaging, and campaigns for local businesses — from skincare startups to milk tea shops to community organizations.</p>
+        <ul class="timeline">
+          <li><span class="yr">2016</span><span>Web Designer — Camel and Straw Media Online Solution</span></li>
+          <li><span class="yr">2017</span><span>Graphic Designer — A Graphics Design Studio</span></li>
+          <li><span class="yr">2018–22</span><span>Graphic Designer — Yuel Graphics and Printing Inc.</span></li>
+          <li><span class="yr">2022–Now</span><span>Graphic Designer — EWAY Business Inc.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills reveal" id="skills">
+    <div class="inner">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="blob" style="font-size:clamp(30px,4vw,54px);">Skills &amp; Software</h2>
+      <div class="cols">
+        <div>
+          <h4>Design</h4>
+          <ul>
+            <li>Branding &amp; Logo Design</li>
+            <li>Packaging Design</li>
+            <li>Print Design</li>
+            <li>Social Media Graphics</li>
+            <li>Tarpaulin &amp; Signage</li>
+            <li>Marketing Materials</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Software</h4>
+          <ul>
+            <li>Adobe Photoshop &amp; Illustrator</li>
+            <li>Adobe Lightroom</li>
+            <li>Adobe Dreamweaver</li>
+            <li>CorelDRAW</li>
+            <li>Sony Vegas / Filmora</li>
+            <li>Microsoft Office Suite</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Also Skilled In</h4>
+          <ul>
+            <li>Basic Web Design (Front-End)</li>
+            <li>Website Mockups &amp; Layout</li>
+            <li>Photo Editing</li>
+            <li>Multimedia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — CONTACT -->
+  <section class="section contact reveal" id="contact">
+    <div class="inner">
+      <span class="eyebrow" style="color:var(--red-dark);">Get In Touch</span>
+      <h2 class="blob">Let's Work<br>Together</h2>
+      <div class="details">
+        <a href="tel:+639362263893">+63 936 226 3893</a>
+        <a href="mailto:larayacd12@gmail.com">larayacd12@gmail.com</a>
+        <span>Pansol, Padre Garcia, Batangas</span>
+      </div>
+      <div class="cta-row">
+        <a href="mailto:larayacd12@gmail.com" class="pill-btn">Get In Touch</a>
+        <a href="assets/DOM_PORTFOLIO.pdf" class="pill-btn ghost" download>Download Portfolio PDF</a>
+      </div>
+      <p class="foot-note">Thank you for viewing — Christian Domenic Laraya, 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-stage">
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+      <img id="lightboxImg" src="" alt="">
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">&#8250;</button>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="lightbox-caption">
+      <div class="t" id="lightboxTitle"></div>
+      <div class="c" id="lightboxCategory"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =============================================================
+   Christian Domenic Laraya — Portfolio interactions
+   Loads portfolio entries from data/gallery.json so new work can
+   be added later without touching this file or the HTML.
+   ============================================================= */
+
+// Fallback copy of gallery.json, used only if fetch() is blocked
+// (e.g. opening index.html directly from disk instead of a server).
+// Keep this in sync with data/gallery.json, or just host the site
+// so fetch() can load the JSON directly — that's the intended path.
+const FALLBACK_GALLERY = [
+  {
+    "title": "Aura — Skincare Campaign",
+    "category": "Branding",
+    "image": "images/branding/aura-model.jpg",
+    "featured": true
+  },
+  {
+    "title": "Aura — Packaging & Dieline",
+    "category": "Branding",
+    "image": "images/branding/aura-packaging.jpg",
+    "featured": true
+  },
+  {
+    "title": "Aura — Logo Mark",
+    "category": "Branding",
+    "image": "images/branding/aura-logo.jpg",
+    "featured": false
+  },
+  {
+    "title": "Aura — Radiant Forever Campaign",
+    "category": "Branding",
+    "image": "images/branding/aura-radiant-forever.jpg",
+    "featured": false
+  },
+  {
+    "title": "Aura — Beach Lifestyle Ad",
+    "category": "Branding",
+    "image": "images/branding/aura-beach.jpg",
+    "featured": false
+  },
+  {
+    "title": "TeaTone — Loyalty Card",
+    "category": "Branding",
+    "image": "images/branding/teatone-loyalty.jpg",
+    "featured": true
+  },
+  {
+    "title": "TeaTone — Drink Lineup",
+    "category": "Branding",
+    "image": "images/branding/teatone-lineup.jpg",
+    "featured": false
+  },
+  {
+    "title": "TeaTone — ₱100 Off Delivery Promo",
+    "category": "Advertising",
+    "image": "images/advertising/teatone-promo.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Diagnostic Pen Torches Flyer",
+    "category": "Advertising",
+    "image": "images/advertising/livingstone-pen-torches.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Flexible Toothbrushes Flyer",
+    "category": "Advertising",
+    "image": "images/advertising/livingstone-toothbrushes.jpg",
+    "featured": true
+  },
+  {
+    "title": "Car Loan — Credit Score Infographic",
+    "category": "Advertising",
+    "image": "images/advertising/car-loan-infographic.jpg",
+    "featured": false
+  },
+  {
+    "title": "Mortgage Rate Advertisement",
+    "category": "Advertising",
+    "image": "images/advertising/mortgage-ad.jpg",
+    "featured": false
+  },
+  {
+    "title": "Social Ads Boost Promotion",
+    "category": "Advertising",
+    "image": "images/advertising/social-boost.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Finger Ring Oximeters EDM",
+    "category": "Digital & Social",
+    "image": "images/digital-social/livingstone-oximeters-edm.jpg",
+    "featured": true
+  },
+  {
+    "title": "Livingstone — Childcare Needs EDM",
+    "category": "Digital & Social",
+    "image": "images/digital-social/livingstone-childcare-edm.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — School Supplies EDM",
+    "category": "Digital & Social",
+    "image": "images/digital-social/livingstone-school-edm.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Childcare Supplies EDM",
+    "category": "Digital & Social",
+    "image": "images/digital-social/livingstone-childcare-supplies-edm.jpg",
+    "featured": false
+  },
+  {
+    "title": "Hidilyn Diaz — Olympic Gold Tribute",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-hidilyn.jpg",
+    "featured": true
+  },
+  {
+    "title": "PH Boxing — Olympic Tribute",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-boxing.jpg",
+    "featured": false
+  },
+  {
+    "title": "Video Creation & Marketing Ad",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-video-creation.jpg",
+    "featured": false
+  },
+  {
+    "title": "Web Development & Creation Ad",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-web-dev.jpg",
+    "featured": false
+  },
+  {
+    "title": "Apolinario Mabini — Commemorative Graphic",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-apolinario.jpg",
+    "featured": false
+  },
+  {
+    "title": "Feeding for Cancer Patients — Community Poster",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-cancer-feeding.jpg",
+    "featured": false
+  },
+  {
+    "title": "Burger Menu Board Design",
+    "category": "Digital & Social",
+    "image": "images/digital-social/social-burger.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Diagnostic Pen Torches Flyer",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-pen-torches-flyer.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Flexible Toothbrushes Flyer",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-toothbrushes-flyer.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Healthcare Supplies Brochure",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-healthcare-brochure.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — School Science Supplies Brochure",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-science-brochure.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Childcare Supplies Brochure",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-childcare-brochure.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Veterinary Product Guide",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-veterinary-catalogue.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — Child Care Product Guide",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-childcare-catalogue.jpg",
+    "featured": false
+  },
+  {
+    "title": "Livingstone — School First Aid Product Guide",
+    "category": "Print & Editorial",
+    "image": "images/print/livingstone-firstaid-catalogue.jpg",
+    "featured": false
+  },
+  {
+    "title": "Dentistria — Dental Service Website",
+    "category": "Web Design",
+    "image": "images/web-design/dentistria.jpg",
+    "featured": true
+  },
+  {
+    "title": "Thrive Agronomics — Agriculture Website",
+    "category": "Web Design",
+    "image": "images/web-design/thrive-agronomics.jpg",
+    "featured": false
+  },
+  {
+    "title": "ELXpress — Recruitment Website",
+    "category": "Web Design",
+    "image": "images/web-design/elxpress.jpg",
+    "featured": false
+  },
+  {
+    "title": "Brean Sands — Holiday Property Website",
+    "category": "Web Design",
+    "image": "images/web-design/brean-sands.jpg",
+    "featured": false
+  },
+  {
+    "title": "Kid's Church — Event Graphic",
+    "category": "Church",
+    "image": "images/church/kids-church.jpg",
+    "featured": false
+  },
+  {
+    "title": "Prayer Works — Weekly Campaign",
+    "category": "Church",
+    "image": "images/church/prayer-works.jpg",
+    "featured": false
+  },
+  {
+    "title": "\"Happiness Is Not Having...\" — Quote Graphic",
+    "category": "Church",
+    "image": "images/church/happiness-quote.jpg",
+    "featured": false
+  },
+  {
+    "title": "Wonderful & Impossible Blessings",
+    "category": "Church",
+    "image": "images/church/wonderful-blessings.jpg",
+    "featured": true
+  }
+];;
+
+const CATEGORY_ORDER = ['Branding', 'Advertising', 'Digital & Social', 'Print & Editorial', 'Web Design', 'Church'];
+
+let GALLERY = [];
+let activeFilter = 'All';
+let lightboxItems = [];
+let lightboxIndex = 0;
+
+async function loadGallery(){
+  try{
+    const res = await fetch('data/gallery.json', { cache:'no-store' });
+    if(!res.ok) throw new Error('bad response');
+    GALLERY = await res.json();
+  }catch(err){
+    GALLERY = FALLBACK_GALLERY;
+  }
+  renderFeatured();
+  renderFilters();
+  renderGallery();
+}
+
+/* ---------- image element with graceful fallback card ---------- */
+function buildCardFrame(item){
+  const frame = document.createElement('div');
+  frame.className = 'card-frame';
+
+  const img = document.createElement('img');
+  img.src = item.image;
+  img.alt = item.title;
+  img.loading = 'lazy';
+
+  const fallback = document.createElement('div');
+  fallback.className = 'fallback';
+  fallback.innerHTML = `<span>${item.title}</span>`;
+
+  img.addEventListener('error', () => {
+    img.classList.add('hide');
+    frame.appendChild(fallback);
+  }, { once:true });
+
+  frame.appendChild(img);
+  return frame;
+}
+
+/* ---------- Featured Works ---------- */
+function renderFeatured(){
+  const grid = document.getElementById('featuredGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  const featured = GALLERY.filter(i => i.featured);
+  featured.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'card reveal in';
+    card.appendChild(buildCardFrame(item));
+    const meta = document.createElement('div');
+    meta.className = 'card-meta';
+    meta.innerHTML = `<span class="t">${item.title}</span><span class="c">${item.category}</span>`;
+    card.appendChild(meta);
+    card.addEventListener('click', () => openLightbox(featured, featured.indexOf(item)));
+    grid.appendChild(card);
+  });
+}
+
+/* ---------- Filter bar ---------- */
+function renderFilters(){
+  const bar = document.getElementById('filterBar');
+  if(!bar) return;
+  const present = CATEGORY_ORDER.filter(cat => GALLERY.some(i => i.category === cat));
+  const cats = ['All', ...present];
+  bar.innerHTML = '';
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (cat === activeFilter ? ' active' : '');
+    btn.type = 'button';
+    btn.textContent = cat;
+    btn.addEventListener('click', () => {
+      activeFilter = cat;
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGallery();
+    });
+    bar.appendChild(btn);
+  });
+}
+
+/* ---------- Main gallery grid ---------- */
+function renderGallery(){
+  const grid = document.getElementById('galleryGrid');
+  const emptyNote = document.getElementById('emptyNote');
+  if(!grid) return;
+  grid.innerHTML = '';
+  const items = activeFilter === 'All' ? GALLERY : GALLERY.filter(i => i.category === activeFilter);
+
+  emptyNote.classList.toggle('show', items.length === 0);
+
+  items.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.appendChild(buildCardFrame(item));
+    const meta = document.createElement('div');
+    meta.className = 'card-meta';
+    meta.innerHTML = `<span class="t">${item.title}</span><span class="c">${item.category}</span>`;
+    card.appendChild(meta);
+    card.addEventListener('click', () => openLightbox(items, items.indexOf(item)));
+    grid.appendChild(card);
+  });
+}
+
+/* ---------- Lightbox ---------- */
+function openLightbox(items, index){
+  lightboxItems = items;
+  lightboxIndex = index;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.classList.add('lightbox-open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.classList.remove('lightbox-open');
+}
+function stepLightbox(delta){
+  lightboxIndex = (lightboxIndex + delta + lightboxItems.length) % lightboxItems.length;
+  updateLightbox();
+}
+function updateLightbox(){
+  const item = lightboxItems[lightboxIndex];
+  if(!item) return;
+  const img = document.getElementById('lightboxImg');
+  img.src = item.image;
+  img.alt = item.title;
+  img.onerror = () => { img.style.display = 'none'; };
+  img.onload = () => { img.style.display = 'block'; };
+  document.getElementById('lightboxTitle').textContent = item.title;
+  document.getElementById('lightboxCategory').textContent = item.category;
+}
+
+function initLightboxControls(){
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if(e.target.id === 'lightbox') closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    const lb = document.getElementById('lightbox');
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') stepLightbox(-1);
+    if(e.key === 'ArrowRight') stepLightbox(1);
+  });
+}
+
+/* ---------- Scroll progress rail ---------- */
+function initProgressRail(){
+  const rail = document.getElementById('progressRail');
+  function update(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    rail.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', update, { passive:true });
+  update();
+}
+
+/* ---------- Mobile menu ---------- */
+function initMobileMenu(){
+  const menuBtn = document.getElementById('menuBtn');
+  const topnav = document.getElementById('topnav');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = topnav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.textContent = isOpen ? 'Close' : 'Menu';
+  });
+  document.querySelectorAll('.topnav .links a').forEach(link => {
+    link.addEventListener('click', () => {
+      topnav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.textContent = 'Menu';
+    });
+  });
+}
+
+/* ---------- Scroll reveal ---------- */
+function initReveal(){
+  const revealEls = document.querySelectorAll('.reveal');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced){
+    revealEls.forEach(el => el.classList.add('in'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold:0.12 });
+  revealEls.forEach(el => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initProgressRail();
+  initMobileMenu();
+  initReveal();
+  initLightboxControls();
+  loadGallery();
+});
+
+</script>
+</body>
+</html>
