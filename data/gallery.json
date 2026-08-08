@@ -1,6 +1,6 @@
 [
   { "title": "Aura — Skincare Campaign", "category": "Branding", "image": "images/branding/aura-model.jpg", "featured": true },
-  { "title": "Aura — Packaging & Dieline", "category": "Branding", "image": "images/branding/aura-packaging.jpg", "featured": true },
+  { "title": "Aura — Packaging & Dieline", "category": "Branding", "image": "images/branding/aura-packaging.jpg", "featured": false },
   { "title": "Aura — Logo Mark", "category": "Branding", "image": "images/branding/aura-logo.jpg", "featured": false },
   { "title": "Aura — Radiant Forever Campaign", "category": "Branding", "image": "images/branding/aura-radiant-forever.jpg", "featured": false },
   { "title": "Aura — Beach Lifestyle Ad", "category": "Branding", "image": "images/branding/aura-beach.jpg", "featured": false },
@@ -9,7 +9,7 @@
 
   { "title": "TeaTone — ₱100 Off Delivery Promo", "category": "Advertising", "image": "images/advertising/teatone-promo.jpg", "featured": false },
   { "title": "Livingstone — Diagnostic Pen Torches Flyer", "category": "Advertising", "image": "images/advertising/livingstone-pen-torches.jpg", "featured": false },
-  { "title": "Livingstone — Flexible Toothbrushes Flyer", "category": "Advertising", "image": "images/advertising/livingstone-toothbrushes.jpg", "featured": true },
+  { "title": "Livingstone — Flexible Toothbrushes Flyer", "category": "Advertising", "image": "images/advertising/livingstone-toothbrushes.jpg", "featured": false },
   { "title": "Car Loan — Credit Score Infographic", "category": "Advertising", "image": "images/advertising/car-loan-infographic.jpg", "featured": false },
   { "title": "Mortgage Rate Advertisement", "category": "Advertising", "image": "images/advertising/mortgage-ad.jpg", "featured": false },
   { "title": "Social Ads Boost Promotion", "category": "Advertising", "image": "images/advertising/social-boost.jpg", "featured": false },
@@ -28,7 +28,7 @@
 
   { "title": "Livingstone — Diagnostic Pen Torches Flyer", "category": "Print & Editorial", "image": "images/print/livingstone-pen-torches-flyer.jpg", "featured": false },
   { "title": "Livingstone — Flexible Toothbrushes Flyer", "category": "Print & Editorial", "image": "images/print/livingstone-toothbrushes-flyer.jpg", "featured": false },
-  { "title": "Livingstone — Healthcare Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-healthcare-brochure.jpg", "featured": false },
+  { "title": "Livingstone — Healthcare Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-healthcare-brochure.jpg", "featured": true },
   { "title": "Livingstone — School Science Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-science-brochure.jpg", "featured": false },
   { "title": "Livingstone — Childcare Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-childcare-brochure.jpg", "featured": false },
   { "title": "Livingstone — Veterinary Product Guide", "category": "Print & Editorial", "image": "images/print/livingstone-veterinary-catalogue.jpg", "featured": false },
@@ -43,4 +43,3 @@
   { "title": "Kid's Church — Event Graphic", "category": "Church", "image": "images/church/kids-church.jpg", "featured": false },
   { "title": "Prayer Works — Weekly Campaign", "category": "Church", "image": "images/church/prayer-works.jpg", "featured": false },
   { "title": "\"Happiness Is Not Having...\" — Quote Graphic", "category": "Church", "image": "images/church/happiness-quote.jpg", "featured": false }]
-  
