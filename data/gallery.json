@@ -1,1 +1,47 @@
+[
+  { "title": "Aura — Skincare Campaign", "category": "Branding", "image": "images/branding/aura-model.jpg", "featured": true },
+  { "title": "Aura — Packaging & Dieline", "category": "Branding", "image": "images/branding/aura-packaging.jpg", "featured": true },
+  { "title": "Aura — Logo Mark", "category": "Branding", "image": "images/branding/aura-logo.jpg", "featured": false },
+  { "title": "Aura — Radiant Forever Campaign", "category": "Branding", "image": "images/branding/aura-radiant-forever.jpg", "featured": false },
+  { "title": "Aura — Beach Lifestyle Ad", "category": "Branding", "image": "images/branding/aura-beach.jpg", "featured": false },
+  { "title": "TeaTone — Loyalty Card", "category": "Branding", "image": "images/branding/teatone-loyalty.jpg", "featured": true },
+  { "title": "TeaTone — Drink Lineup", "category": "Branding", "image": "images/branding/teatone-lineup.jpg", "featured": false },
 
+  { "title": "TeaTone — ₱100 Off Delivery Promo", "category": "Advertising", "image": "images/advertising/teatone-promo.jpg", "featured": false },
+  { "title": "Livingstone — Diagnostic Pen Torches Flyer", "category": "Advertising", "image": "images/advertising/livingstone-pen-torches.jpg", "featured": false },
+  { "title": "Livingstone — Flexible Toothbrushes Flyer", "category": "Advertising", "image": "images/advertising/livingstone-toothbrushes.jpg", "featured": true },
+  { "title": "Car Loan — Credit Score Infographic", "category": "Advertising", "image": "images/advertising/car-loan-infographic.jpg", "featured": false },
+  { "title": "Mortgage Rate Advertisement", "category": "Advertising", "image": "images/advertising/mortgage-ad.jpg", "featured": false },
+  { "title": "Social Ads Boost Promotion", "category": "Advertising", "image": "images/advertising/social-boost.jpg", "featured": false },
+
+  { "title": "Livingstone — Finger Ring Oximeters EDM", "category": "Digital & Social", "image": "images/digital-social/livingstone-oximeters-edm.jpg", "featured": true },
+  { "title": "Livingstone — Childcare Needs EDM", "category": "Digital & Social", "image": "images/digital-social/livingstone-childcare-edm.jpg", "featured": false },
+  { "title": "Livingstone — School Supplies EDM", "category": "Digital & Social", "image": "images/digital-social/livingstone-school-edm.jpg", "featured": false },
+  { "title": "Livingstone — Childcare Supplies EDM", "category": "Digital & Social", "image": "images/digital-social/livingstone-childcare-supplies-edm.jpg", "featured": false },
+  { "title": "Hidilyn Diaz — Olympic Gold Tribute", "category": "Digital & Social", "image": "images/digital-social/social-hidilyn.jpg", "featured": true },
+  { "title": "PH Boxing — Olympic Tribute", "category": "Digital & Social", "image": "images/digital-social/social-boxing.jpg", "featured": false },
+  { "title": "Video Creation & Marketing Ad", "category": "Digital & Social", "image": "images/digital-social/social-video-creation.jpg", "featured": false },
+  { "title": "Web Development & Creation Ad", "category": "Digital & Social", "image": "images/digital-social/social-web-dev.jpg", "featured": false },
+  { "title": "Apolinario Mabini — Commemorative Graphic", "category": "Digital & Social", "image": "images/digital-social/social-apolinario.jpg", "featured": false },
+  { "title": "Feeding for Cancer Patients — Community Poster", "category": "Digital & Social", "image": "images/digital-social/social-cancer-feeding.jpg", "featured": false },
+  { "title": "Burger Menu Board Design", "category": "Digital & Social", "image": "images/digital-social/social-burger.jpg", "featured": false },
+
+  { "title": "Livingstone — Diagnostic Pen Torches Flyer", "category": "Print & Editorial", "image": "images/print/livingstone-pen-torches-flyer.jpg", "featured": false },
+  { "title": "Livingstone — Flexible Toothbrushes Flyer", "category": "Print & Editorial", "image": "images/print/livingstone-toothbrushes-flyer.jpg", "featured": false },
+  { "title": "Livingstone — Healthcare Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-healthcare-brochure.jpg", "featured": false },
+  { "title": "Livingstone — School Science Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-science-brochure.jpg", "featured": false },
+  { "title": "Livingstone — Childcare Supplies Brochure", "category": "Print & Editorial", "image": "images/print/livingstone-childcare-brochure.jpg", "featured": false },
+  { "title": "Livingstone — Veterinary Product Guide", "category": "Print & Editorial", "image": "images/print/livingstone-veterinary-catalogue.jpg", "featured": false },
+  { "title": "Livingstone — Child Care Product Guide", "category": "Print & Editorial", "image": "images/print/livingstone-childcare-catalogue.jpg", "featured": false },
+  { "title": "Livingstone — School First Aid Product Guide", "category": "Print & Editorial", "image": "images/print/livingstone-firstaid-catalogue.jpg", "featured": false },
+
+  { "title": "Dentistria — Dental Service Website", "category": "Web Design", "image": "images/web-design/dentistria.jpg", "featured": true },
+  { "title": "Thrive Agronomics — Agriculture Website", "category": "Web Design", "image": "images/web-design/thrive-agronomics.jpg", "featured": false },
+  { "title": "ELXpress — Recruitment Website", "category": "Web Design", "image": "images/web-design/elxpress.jpg", "featured": false },
+  { "title": "Brean Sands — Holiday Property Website", "category": "Web Design", "image": "images/web-design/brean-sands.jpg", "featured": false },
+
+  { "title": "Kid's Church — Event Graphic", "category": "Church", "image": "images/church/kids-church.jpg", "featured": false },
+  { "title": "Prayer Works — Weekly Campaign", "category": "Church", "image": "images/church/prayer-works.jpg", "featured": false },
+  { "title": "\"Happiness Is Not Having...\" — Quote Graphic", "category": "Church", "image": "images/church/happiness-quote.jpg", "featured": false },
+  { "title": "Wonderful & Impossible Blessings", "category": "Church", "image": "images/church/wonderful-blessings.jpg", "featured": true }
+]
